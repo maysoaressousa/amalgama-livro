@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6b5a5f;
+  --color-on-primary: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #4d4447;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-primary-container: #f8e1e7;
+  --color-secondary-container: #e0def0;
+  --color-on-secondary-container: #616170;
+  --color-outline-variant: #d0c3c6;
+  --color-tertiary-fixed: #d4e6eb;
+  --color-secondary-fixed: #e2e1f2;
+  --color-primary-fixed: #f4dde3;
+
+  --spacing-container-max: 1140px;
+  --spacing-gutter: 24px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(107, 90, 95, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-init {
+  will-change: transform, opacity;
+}
