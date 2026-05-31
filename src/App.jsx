@@ -19,13 +19,22 @@ export default function App() {
     { text: '"Impossível ler apenas um poema por dia. A gente devora a alma da autora."', author: 'Mariana Costa', bgColor: 'bg-secondary-fixed', delay: '200ms' },
   ];
 
-  const purchaseLinks = [
-    { icon: 'shopping_cart', label: 'Amazon', href: '#', delay: '0ms' },
-    { icon: 'shopping_bag', label: 'Shopee', href: '#', delay: '100ms' },
-    { icon: 'photo_camera', label: 'Instagram', href: '#', delay: '200ms' },
-    { icon: 'chat', label: 'WhatsApp', href: '#', delay: '300ms' },
-    { icon: 'mail', label: 'Email', href: '#', delay: '400ms' },
-  ];
+  const supportContent = {
+    title: 'Ajude o Projeto Amálgama a Ganhar Vida',
+    desc: [
+      'Dois livros. Um sonho prestes a sair do papel. Depois de muitos anos escrevendo, finalmente tive dois livros de poemas aprovados por editoras.',
+      'Agora começo a etapa de impressão e lançamento dos exemplares e decidi criar esta campanha de apoio para ajudar esse sonho a ganhar vida.',
+      'Toda contribuição, de qualquer valor, será recebida com enorme carinho e gratidão. Mais do que um apoio financeiro, é uma forma de participar diretamente do nascimento de uma obra independente.',
+      'Quem contribuir fará parte desta trajetória, com agradecimentos nas redes sociais e no lançamento dos livros.',
+      'Algumas obras também são escritas pelas mãos de quem acredita nelas.',
+      'Obrigada por fazer parte deste momento.',
+      'Com carinho,',
+      'Nalini',
+    ],
+    extra: 'Faça parte desta jornada literária e permita que "Amálgama" chegue a mais pessoas que buscam emoção, reflexão e sensibilidade.',
+    pix: 'valzinhaflor@gmail.com',
+    img: 'qr-code.jpg',
+  };
 
   const addToRefs = (el) => {
     if (el && !revealRefs.current.includes(el)) {
@@ -72,9 +81,9 @@ export default function App() {
       <header className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-500 ${isScrolled ? 'py-3 shadow-sm' : 'py-4'}`}>
         <div className="font-serif text-2xl font-medium text-primary">Amálgama</div>
         <nav className="hidden md:flex gap-8">
-          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#about-book">About</a>
-          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#purchase">Book</a>
-          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#gallery">Buy</a>
+          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#about-book">Sobre o Livro</a>
+          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#purchase">Comprar</a>
+          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#gallery">Galeria</a>
         </nav>
         <a className="bg-primary text-on-primary px-6 py-2 rounded-full text-sm font-medium transition-all duration-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:scale-95" href="https://editoraventos.com.br/produto/amalgama-pedacos-de-mim/">Adquira o livro</a>
       </header>
@@ -214,9 +223,6 @@ export default function App() {
             {[
               { src: "capa-livro.jpg", delay: '0ms' },
               { src: "livro-aberto.jpg", delay: '100ms' },
-              { src: "textura-aquarela.jpg", delay: '200ms' },
-              { src: "flores.jpg", delay: '300ms' },
-              { src: "caneta-tinteiro.jpg", delay: '400ms' }
             ].map((img, i) => (
               <div 
                 key={i}
@@ -231,23 +237,28 @@ export default function App() {
         </div>
       </section>
 
-      {/* Links & Purchase */}
+      {/* Apoia-se */}
       <section className="py-24 bg-primary-container/20" id="purchase">
-        <div className="container mx-auto px-gutter max-w-4xl text-center">
-          <h2 ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 font-serif text-3xl text-primary mb-12">Redes Sociais</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {purchaseLinks.map((link, idx) => (
-              <a 
-                key={idx}
-                ref={addToRefs}
-                href={link.href}
-                className="flex flex-col items-center gap-3 p-6 glass-card rounded-xl hover:bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-md group reveal-init opacity-0 translate-y-[30px] transition-all duration-1000"
-                style={{ transitionDelay: link.delay }}
-              >
-                <span className="material-symbols-outlined text-3xl text-primary transition-transform duration-500 group-hover:scale-110">{link.icon}</span>
-                <span className="text-sm font-medium">{link.label}</span>
-              </a>
-            ))}
+        <div className="container mx-auto px-gutter max-w-4xl">
+          <div className="grid gap-12 md:grid-cols-[1.3fr_1fr] items-center text-center md:text-left">
+            <div>
+              <h2 ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 font-serif text-3xl text-primary mb-6">{supportContent.title}</h2>
+              {supportContent.desc.map((para, i) => (
+                <p
+                  key={i}
+                  ref={addToRefs}
+                  className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 text-lg text-on-surface-variant leading-relaxed mb-4"
+                >
+                  {para}
+                </p>
+              ))}
+              <p ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 text-sm text-on-secondary-container leading-relaxed">
+                {supportContent.extra} <strong className="font-semibold">Contribua com o Pix: {supportContent.pix}</strong>
+              </p>
+            </div>
+            <div ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 rounded-3xl overflow-hidden border border-outline-variant/20 shadow-2xl">
+              <img src={supportContent.img} alt="Livro aberto de Amálgama" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            </div>
           </div>
         </div>
       </section>
@@ -276,7 +287,7 @@ export default function App() {
           ))}
         </div>
         <div className="mt-12 text-xs text-on-secondary-container opacity-60">
-          © 2026 Valdênisia D. Nalini. All rights reserved.
+          © 2026 Valdenisia D. Nalini. All rights reserved. Site feito por Mayara Soares contato: mayarasoaresdev@gmail.com
         </div>
       </footer>
     </div>
