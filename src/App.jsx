@@ -15,7 +15,7 @@ export default function App() {
 
   const testimonials = [
     { text: '"Uma leitura que abraça a alma. Me senti em cada verso."', author: 'Ana Oliveira', bgColor: 'bg-primary-fixed' },
-    { text: '"A sensibilidade da Valdênisia é algo raro nos dias de hoje. Magnífico."', author: 'Carlos Mendes', bgColor: 'bg-tertiary-fixed', delay: '100ms' },
+    { text: '"A sensibilidade da Valdenisia é algo raro nos dias de hoje. Magnífico."', author: 'Carlos Mendes', bgColor: 'bg-tertiary-fixed', delay: '100ms' },
     { text: '"Impossível ler apenas um poema por dia. A gente devora a alma da autora."', author: 'Mariana Costa', bgColor: 'bg-secondary-fixed', delay: '200ms' },
   ];
 
@@ -82,8 +82,8 @@ export default function App() {
         <div className="font-serif text-2xl font-medium text-primary">Amálgama</div>
         <nav className="hidden md:flex gap-8">
           <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#about-book">Sobre o Livro</a>
-          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#purchase">Comprar</a>
-          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#gallery">Galeria</a>
+          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#purchase">Apoie o Lançamento</a>
+          <a className="text-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#gallery">Novidades</a>
         </nav>
         <a className="bg-primary text-on-primary px-6 py-2 rounded-full text-sm font-medium transition-all duration-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:scale-95" href="https://editoraventos.com.br/produto/amalgama-pedacos-de-mim/">Adquira o livro</a>
       </header>
@@ -113,7 +113,7 @@ export default function App() {
           <div ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 ease-out flex justify-center" style={{ transitionDelay: '200ms' }}>
             <div className="relative group">
               <div className="absolute -inset-4 bg-primary-container/30 blur-3xl rounded-full transition-transform duration-1000 group-hover:scale-125" />
-              <img alt="Capa do Livro Amálgama" className="relative z-10 w-full max-w-[320px] rounded shadow-2xl transition-transform duration-700 ease-out group-hover:-translate-y-4" src="capa-livro.jpg" />
+              <img alt="Capa do Livro Amálgama" className="relative z-10 w-full max-w-[320px] rounded shadow-2xl transition-transform duration-700 ease-out group-hover:-translate-y-4" src="capa-livro.png" />
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function App() {
             <div className="flex flex-col gap-6">
               <h2 className="font-serif text-3xl text-primary">Sobre a Obra</h2>
               <p className="text-lg text-on-surface-variant leading-relaxed text-justify">
-                "Amálgama – Pedaços de Mim" é uma jornada visceral através da poesia contemporânea. Valdênisia D. Nalini reúne fragmentos de experiências, dores e amores, transformando o ordinário em algo extraordinário através das palavras. 
+                "Amálgama – Pedaços de Mim" é uma jornada visceral através da poesia contemporânea. Valdenisia D. Nalini reúne fragmentos de experiências, dores e amores, transformando o ordinário em algo extraordinário através das palavras. 
               </p>
               <p className="text-lg text-on-surface-variant leading-relaxed text-justify">
                 O livro explora a dualidade da existência, a força da vulnerabilidade e a beleza encontrada nos detalhes mais ínfimos da vida cotidiana.
@@ -161,7 +161,7 @@ export default function App() {
             </div>
           </div>
           <div ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 order-1 md:order-2 flex justify-center">
-            <img alt="Livro Amálgama em 3D" className="w-full max-w-[400px] drop-shadow-2xl rounded transition-transform duration-700 rotate-3 hover:rotate-0" src="capa-livro.jpg" />
+            <img alt="Livro Amálgama em 3D" className="w-full max-w-[400px] drop-shadow-2xl rounded transition-transform duration-700 rotate-3 hover:rotate-0" src="capa-livro.png" />
           </div>
         </div>
       </section>
@@ -174,7 +174,8 @@ export default function App() {
         <div className="container mx-auto px-gutter grid md:grid-cols-2 gap-16 items-center max-w-4xl">
           <div ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000">
             <div className="aspect-square rounded-full overflow-hidden border-8 border-primary-container relative shadow-xl shadow-primary/10 p-3 bg-white">
-              <img alt="Portrait of Valdênisia D. Nalini" className="w-full h-full object-cover rounded-full transition-transform duration-[1000ms] hover:scale-110" src="autora-livro.jpg" />
+              <img alt="Portrait of Valdenísia D. Nalini" className="w-full h-full object-cover rounded-full transition-transform duration-[1000ms] hover:scale-110" src="autora-livro.jpg
+              " />
             </div>
           </div>
           <div ref={addToRefs} className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000" style={{ transitionDelay: '200ms' }}>
@@ -183,10 +184,10 @@ export default function App() {
               "Escrevo para organizar os barulhos internos. Cada poema é um pedaço de mim que agora pertence ao mundo."
             </p>
             <p className="text-sm text-on-secondary-container mb-8 text-justify">
-              Valdênisia D. Nalini é uma observadora do silêncio e das sutilezas. Com uma sensibilidade que transcende o papel, ela convida o leitor a mergulhar em suas próprias profundezas.
+              Valdenísia D. Nalini é uma observadora do silêncio e das sutilezas. Com uma sensibilidade que transcende o papel, ela convida o leitor a mergulhar em suas próprias profundezas.
             </p>
             <div className="font-serif text-xl text-primary italic opacity-70">
-              Valdênisia D. Nalini
+              Valdenísia D. Nalini
             </div>
           </div>
         </div>
@@ -218,19 +219,20 @@ export default function App() {
       {/* Gallery */}
       <section className="py-24 bg-surface" id="gallery">
         <div className="container mx-auto px-gutter max-w-container-max">
-          <h2 className="font-serif text-3xl text-primary text-center mb-16">Adquira seu exemplar</h2>
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+          <h2 className="font-serif text-3xl text-primary text-center mb-16">Novidades</h2>
+          <div className="flex justify-center">
             {[
-              { src: "capa-livro.jpg", delay: '0ms' },
-              { src: "livro-aberto.jpg", delay: '100ms' },
+            
+              { src: "livro-mockup.jpg", delay: '100ms' },
             ].map((img, i) => (
               <div 
                 key={i}
                 ref={addToRefs} 
-                className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 break-inside-avoid"
+                className="reveal-init opacity-0 translate-y-[30px] transition-all duration-1000 text-center"
                 style={{ transitionDelay: img.delay }}
               >
-                <img src={img.src} alt="Universo Amálgama" className="w-full rounded-xl hover:scale-[1.02] transition-all duration-700 hover:shadow-xl border border-black/5" />
+                <img src={img.src} alt="Universo Amálgama" className="w-full max-w-[900px] rounded-xl hover:scale-[1.02] transition-all duration-700 hover:shadow-xl border border-black/5" />
+                <p className="mt-6 text-sm text-on-surface-variant max-w-[900px] mx-auto">Uma prévia exclusiva do livro “Amálgama”. <a href="https://editoraventos.com.br/produto/amalgama-pedacos-de-mim/" className="text-primary hover:underline">Compre aqui</a></p>
               </div>
             ))}
           </div>
@@ -282,8 +284,10 @@ export default function App() {
           "Entre o que sinto e o que escrevo, há um amálgama de tudo o que sou."
         </p>
         <div className="flex gap-8 mt-8">
-          {['Instagram', 'Amazon', 'Shopee', 'Privacy Policy'].map((item, index) => (
-            <a key={index} className="text-sm text-on-secondary-container hover:text-primary transition-all duration-400" href="#">{item}</a>
+          {['Instagram', 'Privacy Policy'].map((item, index) => (
+            <a key={index} className="text-sm text-on-secondary-container hover:text-primary transition-all duration-400" href="https://www.instagram.com/nalini.valflor?igsh=MTdzenR0NzlhZmNsYw==" target="_blank" rel="noopener noreferrer">
+              {item}
+            </a>
           ))}
         </div>
         <div className="mt-12 text-xs text-on-secondary-container opacity-60">
